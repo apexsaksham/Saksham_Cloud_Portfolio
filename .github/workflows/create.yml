@@ -28,9 +28,13 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
-      # ✅ Import the existing S3 bucket
-      - name: Import S3 bucket if not in state
+      # ✅ Import existing S3 bucket if not in state
+      - name: Import S3 bucket
         run: terraform import module.s3.aws_s3_bucket.main tf-portfolio-saksham-cloud || true
+
+      # ✅ Import existing CloudFront distribution if not in state
+      - name: Import CloudFront distribution
+        run: terraform import module.cloudfront.aws_cloudfront_distribution.this <YOUR_DISTRIBUTION_ID> || true
 
       - name: Validate Terraform
         run: terraform validate
@@ -40,3 +44,11 @@ jobs:
 
       - name: Apply Terraform
         run: terraform apply -auto-approve
+
+      # ✅ Optional: Sync website files to S3
+      - name: Sync website files to S3
+        run: aws s3 sync ./website s3://tf-portfolio-saksham-cloud --delete --acl public-read
+
+      # ✅ Optional: Invalidate CloudFront cache
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id <YOUR_DISTRIBUTION_ID> --paths "/*"
