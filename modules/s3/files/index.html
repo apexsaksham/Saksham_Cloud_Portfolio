@@ -100,6 +100,8 @@
     .project .meta{font-size:13px;color:var(--muted)}
     .project .actions{display:flex;gap:8px;margin-top:8px}
 
+
+    
     /* contact */
     .contact-form{display:grid;gap:12px}
     input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:10px;color:#e6eef6;outline:none}
@@ -149,6 +151,7 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+        <a href="#experience">Experience</a>
       </nav>
     </header>
 
@@ -252,6 +255,34 @@
         </div>
       </section>
 
+<!-- Experience -->
+      <section id="experience" class="reveal">
+        <div class="section-title"><h3>Experience</h3></div>
+        <div class="section-sub">Professional internship & hands-on learning</div>
+
+        <div style="margin-top:12px">
+          <div class="card project">
+            <div class="project-header">
+              <div>
+                <h4>ATH Infosystems - Cloud Engineer Intern</h4>
+                <div class="meta">Aug 2024 - Oct 2024 • Linux Administration • AWS Services • Certificate Management</div>
+              </div>
+              <div class="pill">Internship</div>
+            </div>
+            <p class="muted">Managed Linux environments, configured deployments, and worked with AWS services (EC2, S3, IAM). Executed test scripts, and collaborated on structured workflows to improve deployment efficiency. Gained practical experience troubleshooting real-world infrastructure challenges.</p>
+            <div class="actions">
+              <div class="skill-badges">
+                <div class="badge">Linux (Ubuntu)</div>
+                <div class="badge">AWS (EC2, S3, IAM)</div>
+               
+                <div class="badge">Test Automation</div>
+                <div class="badge">Team Collaboration</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Projects -->
       <section id="projects" class="reveal">
         <div class="section-title"><h3>Projects</h3></div>
@@ -262,15 +293,15 @@
           <div class="card project">
             <div class="project-header">
               <div>
-                <h4>2-tier Web App on AWS</h4>
-                <div class="meta">Architecture: S3 + ALB • EC2 (backend) • RDS (MySQL) • VPC & Security</div>
+                <h4>3-tier Web App on AWS</h4>
+                <div class="meta">Architecture: S3 + ALB • EC2 (backend) • RDS (Postgres) • VPC & Security</div>
               </div>
               <div class="pill">Infrastructure</div>
             </div>
-            <p class="muted">Built and deployed a secure 2-tier web application on AWS using Terraform. Implemented VPC with public/private subnets, ALB, EC2 backend, RDS PostgreSQL, and S3 frontend hosting. Configured fine-grained IAM roles, security groups, automated snapshots, and CloudWatch monitoring — demonstrating strong IaC, networking, and cloud deployment skills</p>
+            <p class="muted">Built and deployed a secure 3-tier web application on AWS using Terraform. Implemented VPC with public/private subnets, ALB, EC2 backend, RDS PostgreSQL, and S3 frontend hosting. Configured fine-grained IAM roles, security groups, automated snapshots, and CloudWatch monitoring — demonstrating strong IaC, networking, and cloud deployment skills</p>
             <div class="actions">
-              <button class="btn" data-demo="demo1">View Details</button>
-              <a class="btn secondary" href="#contact">Hire / Collaborate</a>
+              <a class="btn" href="https://github.com/apexsaksham/terraform-3tier-app.git" target="_blank" rel="noopener noreferrer">View Code</a>
+              <a class="btn secondary" href="http://tf-frontend-saksham-16.s3-website.ap-south-1.amazonaws.com" target="_blank">Site Link</a>
             </div>
           </div>
 
@@ -286,26 +317,12 @@
 
 Deployed personal portfolio website on AWS using S3 for static hosting and CloudFront for global content delivery. Implemented Infrastructure as Code with modular Terraform configuration. Automated CI/CD pipeline includes plan & apply workflows gated by PR checks using GitHub Actions.</p>
             <div class="actions">
-  <a class="btn" href="https://sakshamportfolio.cloud" target="_blank" rel="noopener noreferrer">View Live Site</a>
-  
+      <a class="btn" href="https://github.com/apexsaksham/Saksham_Cloud_Portfolio.git" target="_blank" rel="noopener noreferrer">View Code</a>
+      <a class="btn secondary" href="https://sakshamportfolio.cloud" target="_blank" rel="noopener noreferrer">View Live Site</a>  
 </div>
-
-          <div class="card project">
-            <div class="project-header">
-              <div>
-                <h4>Serverless API — Lambda + API Gateway</h4>
-                <div class="meta">Serverless • DynamoDB • SAM/SAM CLI</div>
-              </div>
-              <div class="pill">Serverless</div>
-            </div>
-            <p class="muted">Created a serverless API for form submissions that stores data in DynamoDB and triggers notifications using SNS. Deployed via SAM templates for reproducible infra.</p>
-            <div class="actions">
-              <button class="btn" data-demo="demo3">View Architecture</button>
-              <a class="btn secondary" href="#contact">Discuss</a>
-            </div>
-          </div>
-
-        </div>
+    
+      
+         
       </section>
 
       <!-- Contact -->
@@ -332,11 +349,10 @@ Deployed personal portfolio website on AWS using S3 for static hosting and Cloud
           <div class="card">
             <h4>Quick Links & Info</h4>
             <p class="muted">Email: <strong id="emailText">saksham26singh@gmail.com</strong> <button class="btn secondary" id="copyEmail2">Copy</button></p>
-            <p class="muted">Instagram: <a href="https://instagram.com/becomingsakshamm" target="_blank">@becomingsakshamm</a></p>
             <div style="margin-top:12px">
               <strong>Certifications</strong>
               <div class="skill-badges" style="margin-top:8px">
-                <div class="badge">AWS Certified Cloud Practitioner</div>
+                <div class="badge">AWS Cloud Practitioner Essentials</div>
                 <div class="badge">Linux Foundation — Basics</div>
               </div>
             </div>
