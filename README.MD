@@ -18,7 +18,7 @@ The pipeline provisions cloud infrastructure, hosts the portfolio on **S3 (stati
 Developer → GitHub → GitHub Actions → Terraform → AWS (S3 + CloudFront)
 ```
 
----
+----
 
 ## ⚙️ Features
 
