@@ -28,6 +28,10 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
+      # ✅ Import the existing S3 bucket
+      - name: Import S3 bucket if not in state
+        run: terraform import module.s3.aws_s3_bucket.main tf-portfolio-saksham-cloud || true
+
       - name: Validate Terraform
         run: terraform validate
 
